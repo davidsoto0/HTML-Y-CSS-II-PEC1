@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: $font-family-sans-serif;
+  background-color: $uoc-bg;
+  color: $uoc-corporate;
+}
+
+.uoc-logo {
+  display: block;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+.uoc-title {
+  font-family: $font-family-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: $uoc-corporate;
+  text-align: center;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color:$card-background-color;
+  transition: 0.3s;
+  width: 70%;
+  /* float: left; */
+  padding: 0 10px;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  
+}
+
+
+
+
+

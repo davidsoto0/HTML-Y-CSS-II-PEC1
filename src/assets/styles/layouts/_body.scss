@@ -1,0 +1,67 @@
+@use "sass:map";
+
+.card__body{
+    margin-left: 5%;
+    margin-right: 5%;
+    color: map.get($colors-text, "title");
+
+    .experiencia{
+
+        .experiencia--flex{
+            display: flex;
+            margin-right: 0;
+        }
+        
+        .experiencia--display2blocks{
+            @include display2blocks();
+        }
+
+        .experiencia--bold{
+            font-weight: bold;
+        }
+    }
+
+    .informatica{
+
+        .informatica--flex{
+            display: flex;
+            margin-right: 0;
+        }
+
+        .informatica--display2blocks{
+            @include display2blocks();
+        }
+    }
+}
+
+.card__footer{
+    margin-bottom: 50px;
+}
+
+
+@media only screen and (max-width: 780px) {
+    .card__body{
+
+        .experiencia{
+
+            .experiencia--flex{
+                display: block;
+            }
+
+            .experiencia--display2blocks{
+                @include normalBlocks();
+            }
+        }
+
+        .informatica{
+
+            .informatica--flex{
+                display: block;
+            }
+            
+            .informatica--display2blocks{
+                @include normalBlocks();
+            }
+        }
+    }
+}
