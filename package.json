@@ -10,7 +10,7 @@
     "dev": "npm-run-all clean parcel:serve",
     "stylelint": "stylelint src/**/*.scss",
     "dev:sas": "npm-run-all clean stylelint parcel:serve",
-    "build": "npm-run-all clean stylelint parcel:build",
+    "build": "npm-run-all stylelint parcel:build",
     "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
   },
   "repository": {
