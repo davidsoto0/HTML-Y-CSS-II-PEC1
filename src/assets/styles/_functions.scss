@@ -16,3 +16,8 @@
     display: block;
     width: 100%;
 }
+
+@function tamImage($sice, $divisor) {
+    $restult: $sice/ $divisor;
+    @return $restult;
+  }
