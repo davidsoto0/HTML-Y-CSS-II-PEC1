@@ -1,67 +1,64 @@
 @use "sass:map";
 
+.card__header {
+  display: flex;
 
-.card__header{
-    display: flex;
+  .informacion {
+    @include card__headerInformation();
 
-    .informacion{
-        margin-left: auto;
-        display: block;
-        width: 75%;
-        margin-right: 5%;
-
-        .informacion__title--center{
-            color: map.get($colors-text, "title");
-            text-align: center;
-        }
-        .informacion__address--right {
-            color: map.get($colors-text, "info");
-            text-align: right;
-
-        }
-        .informacion__email--right{
-            color: map.get($colors-text, "email");
-            font-weight: bold;
-            text-align: right;
-        }
+    .informacion__title {
+      @include card__headerInformation();
+      color: map.get($colors-text, "title");
+      text-align: center;
     }
-    
-    .image{
-        margin-top: 20px;
-        width: 25%;
-        
-        .image--scale{
-            transform:scale(1);
-            transition: transform 1.5s;
-        }
-
-        .image--scale:hover{
-            transform:scale(1.1);
-        }
-
+    .informacion__address {
+      @include card__headerInformation();
+      color: map.get($colors-text, "info");
+      text-align: right;
     }
-
-  }
-
-  @media only screen and (max-width: 780px) {
-    .card__header{
-        display: block;
-
-        .informacion{
-            width: auto;
-
-            .informacion__title{
-                margin-right: 0;
-            }
-        }
-        
-        .image{
-            width: auto;
-            margin-top: 10px;
-
-            .image--scale{
-                @include alingItemCenter();
-            }
-        }
+    .informacion__email {
+      @include card__headerInformation();
+      color: map.get($colors-text, "email");
+      font-weight: bold;
+      text-align: right;
     }
   }
+
+  .image {
+    margin-top: 20px;
+    width: 25%;
+
+    .image__me {
+      transform: scale(1);
+      transition: transform 1.5s;
+    }
+
+    .image__me:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .card__header {
+    display: block;
+
+    .informacion {
+      width: auto;
+
+      .informacion__title {
+        margin-right: 0;
+        width: auto;
+      }
+    }
+
+    .image {
+      width: auto;
+      margin-top: 10px;
+
+      .image__me {
+        @include alingItemCenter();
+      }
+    }
+  }
+}
